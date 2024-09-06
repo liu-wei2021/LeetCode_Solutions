@@ -1,8 +1,12 @@
+#include<iostream>
+#include<string>
+#include <algorithm> 
+
 class Solution {
 
 
 public:
-    std::string mergeAlternately(string word1, string word2) {
+    std::string mergeAlternately(std::string word1, std::string word2) {
         std::string merged_string = "";
         int min_length = std::min(word1.length(),word2.length());
 
@@ -23,3 +27,9 @@ public:
 
     }
 };
+
+int main() {
+    Solution solution;
+    std::cout << solution.mergeAlternately("abc", "pqr") << std::endl;    // Output: "apbqcr"
+    return 0;
+}
